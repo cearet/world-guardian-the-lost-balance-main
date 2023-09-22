@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/core.uss?fileID=7433441132597879392&amp;guid=1d5bb3eafde9dc249b4bb30cba3f3bde&amp;type=3#core" />
+    <Style src="project://database/Assets/UI/Collectible/Collectible.uss?fileID=7433441132597879392&amp;guid=b32ab751ff864ce42a44249294b2f8e2&amp;type=3#Collectible" />
+    <ui:VisualElement name="Background" class="screen-bg" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:GroupBox name="UIWrapper" class="ui-wrapper">
+            <ui:GroupBox name="ScrenTitleWrapper" class="screnTitle-wrapper">
+                <ui:Label text="Collectibles" display-tooltip-when-elided="true" name="TitleScreenLabel" enable-rich-text="true" class="titleScreen" />
+                <ui:Label display-tooltip-when-elided="true" name="SubtitleScreenLabel" text="You have unlocked &lt;b&gt;%s1&lt;/b&gt; of &lt;b&gt;%s2&lt;/b&gt; %s3" class="subtitleScreen" />
+                <ui:ProgressBar name="CollectibleProgressBar" value="50" class="progress-bar" />
+            </ui:GroupBox>
+            <ui:ListView name="CollectibleList" virtualization-method="DynamicHeight" selection-type="None" style="flex-grow: 1;" />
+            <ui:GroupBox name="ActionButtons" class="btn-row btn-actions">
+                <ui:Button text="Back" display-tooltip-when-elided="true" name="BackButton" class="btn btn-lg" />
+            </ui:GroupBox>
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>
